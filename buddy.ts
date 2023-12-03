@@ -15,6 +15,13 @@ const buddy = {
 
     return text.trim();
   },
+  is_numeric: (str: string) => /^\d+$/.test(str),
+  is_character: (str: string) => /[^0-9]+$/.test(str),
+  sum: (list: Array<number | string>) => {
+    let i = 0;
+    list.forEach((item) => i += parseInt(item));
+    return i;
+  },
 };
 
 export default buddy;
