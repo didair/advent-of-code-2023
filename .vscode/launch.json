@@ -13,7 +13,7 @@
 			"runtimeExecutable": "/home/didair/.deno/bin/deno",
 			"runtimeArgs": [
 				"run",
-				"--inspect-brk",
+				"--inspect",
 				"--allow-read",
 				"--inspect-wait",
 				"--allow-all"
