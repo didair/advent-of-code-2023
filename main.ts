@@ -1,4 +1,4 @@
-import solution from "./3/two.js";
+import solution from "./4/two.js";
 
 const result = await solution.run();
 

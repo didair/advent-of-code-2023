@@ -17,9 +17,15 @@ const buddy = {
   },
   is_numeric: (str: string) => /^\d+$/.test(str),
   is_character: (str: string) => /[^0-9]+$/.test(str),
-  sum: (list: Array<number | string>) => {
+  sum: (list: Array<number | string>, key: string | undefined) => {
     let i = 0;
-    list.forEach((item) => i += parseInt(item));
+    list.forEach((item) => {
+      if (key != null) {
+        i += parseInt(item[key]);
+      } else {
+        i += parseInt(item);
+      }
+    });
     return i;
   },
 };
