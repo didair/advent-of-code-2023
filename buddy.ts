@@ -1,6 +1,10 @@
 const buddy = {
-  loadAndSplitFile: async (filePath: string) => {
+  loadFile: async (filePath: string) => {
     const input = await Deno.readTextFile(filePath);
+    return input;
+  },
+  loadAndSplitFile: async (filePath: string) => {
+    const input = await buddy.loadFile(filePath);
     return input.split("\n").filter((value) => value != "");
   },
   keepLetters: (text: string) => text.replace(/[^0-9]*/g, ""),
