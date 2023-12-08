@@ -32,6 +32,17 @@ const buddy = {
     });
     return i;
   },
+  removeCharAtIndex: (inputString: string, indexToRemove: number) => {
+    if (indexToRemove < 0 || indexToRemove >= inputString.length) {
+      console.error("Invalid index");
+      return inputString;
+    }
+
+    const modifiedString = inputString.slice(0, indexToRemove) +
+      inputString.slice(indexToRemove + 1);
+
+    return modifiedString;
+  },
 };
 
 export default buddy;
